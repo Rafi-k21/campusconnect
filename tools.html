@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CampusConnect</title>
+  <meta name="description" content="A student services portal for events, tools and bookings." />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" role="banner">
+  <div class="container">
+    <h1 class="logo"><a href="index.html">CampusConnect</a></h1>
+    <button id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">☰</button>
+    <nav id="siteNav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="darkToggle" aria-pressed="false" title="Toggle dark mode">🌙</button>
+  </div>
+</header>
+<main id="main" class="container">
+
+<section class="grid two-col" aria-labelledby="tools-title">
+  <h2 id="tools-title" class="sr-only">Student Tools</h2>
+
+  <article>
+    <h3>GPA Calculator</h3>
+    <form id="gpaForm">
+      <div class="row">
+        <label>Module Name <input type="text" id="modName" required></label>
+        <label>Grade (0–100) <input type="number" id="modGrade" min="0" max="100" required></label>
+        <label>Credits <input type="number" id="modCredits" min="1" max="60" required></label>
+        <button type="button" id="addModule">Add</button>
+      </div>
+    </form>
+    <table id="gpaTable" aria-describedby="gpaHelp">
+      <caption class="sr-only">Modules list for GPA calculation</caption>
+      <thead><tr><th>Module</th><th>Grade</th><th>Credits</th><th>Remove</th></tr></thead>
+      <tbody></tbody>
+      <tfoot><tr><td colspan="4" id="gpaOutput">GPA: 0.00</td></tr></tfoot>
+    </table>
+    <p id="gpaHelp">Your modules are saved locally on this device.</p>
+  </article>
+
+  <aside>
+    <h3>Budget Planner</h3>
+    <form id="budgetForm">
+      <label>Item <input type="text" id="budgetItem" required></label>
+      <label>Amount (£) <input type="number" id="budgetAmount" min="0" step="0.01" required></label>
+      <button type="button" id="addExpense">Add</button>
+    </form>
+    <ul id="budgetList" aria-live="polite"></ul>
+    <p>Total: £<span id="budgetTotal">0.00</span></p>
+  </aside>
+</section>
+
+<script src="js/tools.js"></script>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2025 CampusConnect — Built for COM109 CW2.</p>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

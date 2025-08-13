@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CampusConnect</title>
+  <meta name="description" content="A student services portal for events, tools and bookings." />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" role="banner">
+  <div class="container">
+    <h1 class="logo"><a href="index.html">CampusConnect</a></h1>
+    <button id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">☰</button>
+    <nav id="siteNav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="darkToggle" aria-pressed="false" title="Toggle dark mode">🌙</button>
+  </div>
+</header>
+<main id="main" class="container">
+
+<section aria-labelledby="booking-title">
+  <h2 id="booking-title">Facility Booking</h2>
+  <form id="bookingForm" novalidate>
+    <div class="grid two-col">
+      <label>Full Name
+        <input name="name" id="name" autocomplete="name" required>
+      </label>
+      <label>Email
+        <input type="email" name="email" id="email" autocomplete="email" required>
+      </label>
+      <label>Phone
+        <input type="tel" name="phone" id="phone" placeholder="+44 7123 456789" required>
+      </label>
+      <label>Facility
+        <select name="facility" id="facility" required>
+          <option value="">Select one</option>
+          <option value="library">Library Study Room</option>
+          <option value="sports">Sports Court</option>
+          <option value="lab">Computer Lab</option>
+        </select>
+      </label>
+      <label>Date
+        <input type="date" name="date" id="date" required>
+      </label>
+      <label>Time
+        <input type="time" name="time" id="time" required>
+      </label>
+      <label>Additional Notes
+        <textarea name="notes" id="notes" rows="3" maxlength="300" placeholder="Any special requests"></textarea>
+      </label>
+    </div>
+    <button type="submit">Book Now</button>
+    <p id="formErrors" role="alert" aria-live="assertive" class="error"></p>
+  </form>
+
+  <section id="bookingSummary" hidden aria-live="polite" aria-labelledby="summary-title">
+    <h3 id="summary-title">Booking Summary</h3>
+    <div class="summary"></div>
+  </section>
+</section>
+
+<script src="js/booking.js"></script>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2025 CampusConnect — Built for COM109 CW2.</p>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

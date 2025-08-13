@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CampusConnect</title>
+  <meta name="description" content="A student services portal for events, tools and bookings." />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" role="banner">
+  <div class="container">
+    <h1 class="logo"><a href="index.html">CampusConnect</a></h1>
+    <button id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">☰</button>
+    <nav id="siteNav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="tools.html">Tools</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="darkToggle" aria-pressed="false" title="Toggle dark mode">🌙</button>
+  </div>
+</header>
+<main id="main" class="container">
+
+<section class="hero" role="region" aria-label="Featured content">
+  <div class="slides" aria-live="polite">
+    <figure class="slide visible">
+      <img src="images/banner1.svg" alt="Students collaborating on campus project">
+      <figcaption>Plan your week with events & tools.</figcaption>
+    </figure>
+    <figure class="slide">
+      <img src="images/banner2.svg" alt="Library booking illustration">
+      <figcaption>Book facilities in seconds.</figcaption>
+    </figure>
+    <figure class="slide">
+      <img src="images/banner3.svg" alt="Budgeting and GPA tools">
+      <figcaption>Use calculators that save your progress.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="grid two-col">
+  <article>
+    <h2>What is CampusConnect?</h2>
+    <p>Everything you need in one place: events, bookings, a GPA calculator, a budget planner, and more.</p>
+  </article>
+  <aside>
+    <h2>Quick Start</h2>
+    <ol>
+      <li>Browse upcoming <a href="events.html">events</a>.</li>
+      <li>Try our <a href="tools.html">student tools</a>.</li>
+      <li><a href="booking.html">Book</a> a library room or sports court.</li>
+    </ol>
+  </aside>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2025 CampusConnect — Built for COM109 CW2.</p>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
