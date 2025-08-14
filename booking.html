@@ -3,34 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CampusConnects</title>
-  <meta name="description" content="A student services portal for events, tools and bookings." />
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <title>CampusConnect — Enhanced Booking</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/booking-enhanced.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header" role="banner">
+
+<header class="site-header">
   <div class="container">
     <h1 class="logo"><a href="index.html">CampusConnect</a></h1>
-    <button id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">☰</button>
-    <nav id="siteNav" aria-label="Primary">
+    <button id="navToggle">☰</button>
+    <nav id="siteNav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="tools.html">Tools</a></li>
-        <li><a href="booking.html">Booking</a></li>
+        <li><a class="active" href="booking.html">Booking</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <button id="darkToggle" aria-pressed="false" title="Toggle dark mode">🌙</button>
+    <button id="darkToggle">🌙</button>
   </div>
 </header>
-<main id="main" class="container">
+
+<main id="main" class="container booking-page">
 
 <section aria-labelledby="booking-title">
   <h2 id="booking-title">Facility Booking</h2>
+
   <form id="bookingForm" novalidate>
     <div class="grid two-col">
       <label>Full Name
@@ -56,28 +58,39 @@
       <label>Time
         <input type="time" name="time" id="time" required>
       </label>
+      <label>Booking Duration (hrs)
+        <input type="number" name="duration" id="duration" min="1" max="8" value="1">
+      </label>
+      <label>Number of Participants
+        <input type="number" name="participants" id="participants" min="1" value="1">
+      </label>
+      <label>Purpose of Booking
+        <input name="purpose" id="purpose" placeholder="Study session, sports practice, etc.">
+      </label>
       <label>Additional Notes
-        <textarea name="notes" id="notes" rows="3" maxlength="300" placeholder="Any special requests"></textarea>
+        <textarea name="notes" id="notes" rows="3" maxlength="300"></textarea>
       </label>
     </div>
-    <button type="submit">Book Now</button>
-    <p id="formErrors" role="alert" aria-live="assertive" class="error"></p>
+
+    <button type="submit" class="btn-booking">Book Now</button>
+    <p id="formErrors" role="alert" class="error"></p>
   </form>
 
-  <section id="bookingSummary" hidden aria-live="polite" aria-labelledby="summary-title">
-    <h3 id="summary-title">Booking Summary</h3>
+  <section id="bookingSummary" hidden aria-live="polite">
+    <h3>Booking Summary</h3>
     <div class="summary"></div>
   </section>
 </section>
 
-<script src="js/booking.js"></script>
-
 </main>
+
 <footer class="site-footer">
   <div class="container">
-    <p>&copy; 2025 CampusConnect — Built for COM109 CW2.</p>
+    <p>&copy; 2025 CampusConnect</p>
   </div>
 </footer>
+
+<script src="js/booking.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
