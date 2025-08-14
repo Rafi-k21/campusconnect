@@ -1,4 +1,3 @@
-
 // GPA Calculator with localStorage
 const storeKey = 'cc-modules';
 
