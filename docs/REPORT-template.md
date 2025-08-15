@@ -128,7 +128,7 @@ Results: All forms correctly rejected invalid inputs and displayed helpful error
 
 ##8. Individual Contributions
 
-Rafi-k21 (Group Leader)
+# Rafi-k21 (Group Leader)
 
 Led the end-to-end development of CampusConnect, ensuring all core pages (Home, Events, Tools, Booking, Contact) followed a consistent design, accessibility standards, and responsive layout.
 
@@ -140,7 +140,7 @@ Provided guidance and support to team members, helping them structure their indi
 
 Oversaw testing, validation, and final deployment, ensuring the site met usability and accessibility goals.
 
-abuHasan12
+# abuHasan12
 
 Contributed to the Booking Page by helping design the form structure and reviewing validation rules.
 
@@ -148,7 +148,7 @@ Collaborated on testing scenarios such as invalid dates and incomplete submissio
 
 Assisted with page content and user flow ideas.
 
-mdtarekulster
+# mdtarekulster
 
 Assisted in shaping the Contact Page design, providing input on form fields and accessibility considerations.
 
@@ -156,7 +156,7 @@ Suggested the integration of the Google Maps embed for location awareness.
 
 Participated in cross-browser and device testing.
 
-Junayed190
+# Junayed190
 
 Supported the Events Page development by helping refine the layout structure and contributing ideas for card-based displays.
 
